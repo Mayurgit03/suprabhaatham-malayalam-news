@@ -50,13 +50,13 @@ const NDTVHeroSection = () => {
   ];
 
   return (
-    <section className="bg-background py-8">
+    <section className="bg-background py-8 animate-fade-in">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Main Featured Story - Takes 2 columns */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 animate-scale-in">
             <Link to={`/article/${featuredStory.id}`} className="group block">
-              <div className="relative overflow-hidden rounded-lg">
+              <div className="relative overflow-hidden rounded-lg shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
                 <img
                   src={featuredStory.imageUrl}
                   alt={featuredStory.title}
@@ -112,8 +112,8 @@ const NDTVHeroSection = () => {
           </div>
 
           {/* Sidebar Stories - Takes 1 column */}
-          <div className="space-y-6">
-            <h3 className="text-xl font-bold text-headline-primary border-b-2 border-primary pb-2">
+          <div className="space-y-6 animate-slide-up">
+            <h3 className="text-xl font-bold text-headline-primary border-b-2 border-primary pb-2 hover:border-breaking transition-colors duration-300">
               Top Stories
             </h3>
             
@@ -122,7 +122,7 @@ const NDTVHeroSection = () => {
                 <Link
                   key={story.id}
                   to={`/article/${story.id}`}
-                  className="group block"
+                  className="group block hover:bg-accent/50 p-3 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-md"
                 >
                   <div className="flex space-x-4">
                     {/* Story Image */}
@@ -130,7 +130,7 @@ const NDTVHeroSection = () => {
                       <img
                         src={story.imageUrl}
                         alt={story.title}
-                        className="w-24 h-20 object-cover rounded group-hover:scale-105 transition-transform duration-300"
+                        className="w-24 h-20 object-cover rounded group-hover:scale-110 transition-all duration-500 group-hover:brightness-110"
                       />
                     </div>
                     
@@ -157,9 +157,9 @@ const NDTVHeroSection = () => {
             
             {/* View All Button */}
             <div className="pt-4 border-t border-border">
-              <Button variant="outline" className="w-full group">
+              <Button variant="outline" className="w-full group hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:shadow-lg hover:animate-glow">
                 View All World News
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-2 transition-all duration-300" />
               </Button>
             </div>
           </div>

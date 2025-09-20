@@ -59,16 +59,16 @@ const NewsCard: React.FC<NewsCardProps> = ({
   };
 
   return (
-    <Card className={`group hover:shadow-news-card transition-all duration-300 overflow-hidden bg-gradient-card border-0 ${
-      isFeatured ? 'shadow-hero' : ''
-    } ${isBreaking ? 'ring-2 ring-breaking/50' : ''}`}>
+    <Card className={`group hover:shadow-news-card hover:shadow-xl transition-all duration-500 overflow-hidden bg-gradient-card border-0 hover:-translate-y-1 hover:scale-105 animate-fade-in ${
+      isFeatured ? 'shadow-hero animate-bounce-in' : ''
+    } ${isBreaking ? 'ring-2 ring-breaking/50 animate-pulse' : ''}`}>
       <Link to={`/article/${id}`}>
         {imageUrl && (
           <div className={`relative overflow-hidden ${isFeatured ? 'h-64' : 'h-48'}`}>
             <img
               src={imageUrl}
               alt={title}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700 group-hover:brightness-110 group-hover:contrast-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
             

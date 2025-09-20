@@ -35,14 +35,14 @@ const Header = () => {
       </div>
 
       {/* Main Header */}
-      <header className="bg-primary text-primary-foreground sticky top-0 z-50 shadow-lg">
+      <header className="bg-primary text-primary-foreground sticky top-0 z-50 shadow-lg backdrop-blur-md bg-primary/95 animate-slide-in">
         <div className="container mx-auto px-4">
           {/* Top section with logo and navigation */}
           <div className="flex items-center justify-between py-3">
             {/* Logo */}
-            <Link to="/" className="flex items-center space-x-3">
-              <div className="bg-white/10 p-2 rounded">
-                <span className="text-xl font-bold font-malayalam">
+            <Link to="/" className="flex items-center space-x-3 group">
+              <div className="bg-white/10 p-2 rounded group-hover:bg-white/20 transition-all duration-300 group-hover:scale-105">
+                <span className="text-xl font-bold font-malayalam group-hover:animate-pulse">
                   സുപ്രഭാതം
                 </span>
               </div>
@@ -94,7 +94,7 @@ const Header = () => {
                 <Link
                   key={category.path}
                   to={category.path}
-                  className="text-white/90 hover:text-white font-medium transition-colors py-1 px-2 hover:bg-white/10 rounded font-malayalam text-sm uppercase tracking-wide"
+                  className="text-white/90 hover:text-white font-medium transition-all duration-300 py-1 px-2 hover:bg-white/10 rounded font-malayalam text-sm uppercase tracking-wide hover:scale-105 hover:shadow-md relative group"
                 >
                   {language === 'ml' && category.ml ? category.ml : category.name}
                 </Link>
