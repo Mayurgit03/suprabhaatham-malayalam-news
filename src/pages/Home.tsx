@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '@/components/news/Header';
-import HeroSection from '@/components/news/HeroSection';
+import NDTVHeroSection from '@/components/news/NDTVHeroSection';
+import TopNewsSection from '@/components/news/TopNewsSection';
 import NewsCard from '@/components/news/NewsCard';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -96,7 +97,8 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <HeroSection />
+      <NDTVHeroSection />
+      <TopNewsSection />
       
       <main className="container mx-auto px-4 py-12">
         {/* Breaking News Section */}

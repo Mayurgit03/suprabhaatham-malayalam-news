@@ -35,23 +35,23 @@ const Header = () => {
       </div>
 
       {/* Main Header */}
-      <header className="bg-background border-b border-border shadow-sm sticky top-0 z-50">
+      <header className="bg-primary text-primary-foreground sticky top-0 z-50 shadow-lg">
         <div className="container mx-auto px-4">
-          {/* Top section with logo and search */}
-          <div className="flex items-center justify-between py-4">
+          {/* Top section with logo and navigation */}
+          <div className="flex items-center justify-between py-3">
             {/* Logo */}
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="bg-gradient-hero p-3 rounded-lg shadow-hero">
-                <span className="text-2xl font-bold text-primary-foreground font-malayalam">
+            <Link to="/" className="flex items-center space-x-3">
+              <div className="bg-white/10 p-2 rounded">
+                <span className="text-xl font-bold font-malayalam">
                   സുപ്രഭാതം
                 </span>
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-headline-primary font-headline">
-                  Suprabhaatham
+                <h1 className="text-xl font-bold font-headline">
+                  SUPRABHAATHAM
                 </h1>
-                <p className="text-sm text-byline">
-                  {language === 'ml' ? 'മലയാളം വാർത്താ പത്രം' : 'Malayalam News Portal'}
+                <p className="text-xs opacity-80">
+                  {language === 'ml' ? 'മലയാളം വാർത്താ പത്രം' : 'MALAYALAM NEWS'}
                 </p>
               </div>
             </Link>
@@ -59,17 +59,17 @@ const Header = () => {
             {/* Search and Language Toggle */}
             <div className="hidden md:flex items-center space-x-4">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
                 <Input
                   placeholder={language === 'ml' ? 'വാർത്തകൾ തിരയുക...' : 'Search news...'}
-                  className="pl-10 w-80 font-malayalam"
+                  className="pl-10 w-80 font-malayalam bg-white/10 border-white/20 text-white placeholder:text-white/70"
                 />
               </div>
               <Button
-                variant="outline"
+                variant="ghost"
                 size="sm"
                 onClick={() => setLanguage(language === 'ml' ? 'en' : 'ml')}
-                className="flex items-center gap-2"
+                className="flex items-center gap-2 text-white hover:bg-white/10"
               >
                 <Globe className="h-4 w-4" />
                 {language === 'ml' ? 'EN' : 'മല'}
@@ -88,13 +88,13 @@ const Header = () => {
           </div>
 
           {/* Navigation */}
-          <nav className={`${isMenuOpen ? 'block' : 'hidden'} md:block pb-4`}>
-            <div className="flex flex-col md:flex-row md:items-center md:space-x-8 space-y-2 md:space-y-0">
+          <nav className={`${isMenuOpen ? 'block' : 'hidden'} md:block border-t border-white/20 pt-3`}>
+            <div className="flex flex-col md:flex-row md:items-center md:space-x-6 space-y-2 md:space-y-0">
               {categories.map((category) => (
                 <Link
                   key={category.path}
                   to={category.path}
-                  className="text-foreground hover:text-primary font-medium transition-colors py-2 px-1 border-b-2 border-transparent hover:border-primary font-malayalam"
+                  className="text-white/90 hover:text-white font-medium transition-colors py-1 px-2 hover:bg-white/10 rounded font-malayalam text-sm uppercase tracking-wide"
                 >
                   {language === 'ml' && category.ml ? category.ml : category.name}
                 </Link>

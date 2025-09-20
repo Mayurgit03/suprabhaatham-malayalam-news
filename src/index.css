@@ -18,8 +18,8 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 210 15% 15%;
 
-    /* Professional news brand colors */
-    --primary: 210 100% 45%; /* News blue */
+    /* NDTV-inspired professional colors */
+    --primary: 210 100% 35%; /* NDTV blue */
     --primary-foreground: 0 0% 98%;
     
     --breaking: 0 85% 55%; /* Breaking news red */
@@ -61,7 +61,7 @@ All colors MUST be HSL.
     --category-gulf: 35 85% 50%;
     
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(210 100% 45%), hsl(220 85% 50%));
+    --gradient-hero: linear-gradient(135deg, hsl(210 100% 35%), hsl(210 100% 45%));
     --gradient-breaking: linear-gradient(135deg, hsl(0 85% 55%), hsl(15 85% 50%));
     --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(210 15% 98%));
     
