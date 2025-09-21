@@ -1,169 +1,138 @@
 import React from 'react';
-import Header from '@/components/news/Header';
-import NDTVHeroSection from '@/components/news/NDTVHeroSection';
-import TopNewsSection from '@/components/news/TopNewsSection';
-import NewsCard from '@/components/news/NewsCard';
+import NDTVHeader from '@/components/news/NDTVHeader';
+import NDTVHeroMain from '@/components/news/NDTVHeroMain';
+import NDTVNewsSections from '@/components/news/NDTVNewsSections';
+import NDTVFooter from '@/components/news/NDTVFooter';
+import BreakingNewsStory from '@/components/news/BreakingNewsStory';
+import SecondBreakingNewsStory from '@/components/news/SecondBreakingNewsStory';
+import TrendingNewsSidebar from '@/components/news/TrendingNewsSidebar';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { ChevronRight, Flame } from 'lucide-react';
+import { ChevronRight, Flame, TrendingUp, Zap, Eye } from 'lucide-react';
 
 const Home = () => {
-  // Sample news data - in real app, this would come from your backend/CMS
-  const breakingNews = [
+  // Additional featured stories for NDTV-style layout
+  const featuredStories = [
     {
-      id: '1',
-      title: 'Kerala Government Announces New IT Policy',
-      malayalamTitle: 'കേരള സർക്കാർ പുതിയ ഐടി നയം പ്രഖ്യാപിച്ചു',
-      excerpt: 'Comprehensive reforms to boost technology sector growth and create employment opportunities...',
-      malayalamExcerpt: 'സാങ്കേതിക മേഖലയുടെ വളർച്ച പ്രോത്സാഹിപ്പിക്കാനും തൊഴിലവസരങ്ങൾ സൃഷ്ടിക്കാനുമുള്ള സമഗ്ര പരിഷ്കാരങ്ങൾ...',
-      category: 'Tech',
-      author: 'Priya Nair',
+      id: '14',
+      title: 'Digital Kerala Initiative Transforms Rural Areas',
+      malayalamTitle: 'ഡിജിറ്റൽ കേരള സംരംഭം ഗ്രാമപ്രദേശങ്ങളെ മാറ്റിമറിക്കുന്നു',
+      excerpt: 'High-speed internet connectivity reaches remote villages, enabling digital literacy and e-governance...',
+      category: 'Technology',
+      author: 'Anitha Kumari',
+      publishedAt: '30 minutes ago',
+      imageUrl: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop',
+      views: 18750,
+      comments: 92,
+      isBreaking: true
+    },
+    {
+      id: '15',
+      title: 'Renewable Energy Projects Boost Kerala Economy',
+      malayalamTitle: 'പുനരുപയോഗ ഊർജ പദ്ധതികൾ കേരള സമ്പദ്വ്യവസ്ഥയെ ഉത്തേജിപ്പിക്കുന്നു',
+      excerpt: 'Solar and wind energy installations create thousands of jobs while reducing carbon footprint...',
+      category: 'Environment',
+      author: 'Dr. Rajesh Nair',
       publishedAt: '1 hour ago',
-      imageUrl: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=400&fit=crop',
-      isBreaking: true,
-      views: 15420,
-      comments: 89,
-    },
-    {
-      id: '2',
-      title: 'Monsoon Update: Heavy Rainfall Expected',
-      malayalamTitle: 'മൺസൂൺ അപ്ഡേറ്റ്: കനത്ത മഴയ്ക്ക് സാധ്യത',
-      excerpt: 'Weather department issues yellow alert for coastal districts as southwest monsoon intensifies...',
-      malayalamExcerpt: 'തെക്കുപടിഞ്ഞാറൻ കാറ്റ് ശക്തമാകുന്നതിനാൽ തീരദേശ ജില്ലകൾക്ക് യെല്ലോ അലേർട്ട് പ്രഖ്യാപിച്ചു...',
-      category: 'Kerala',
-      author: 'Suresh Kumar',
-      publishedAt: '3 hours ago',
-      imageUrl: 'https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=600&h=400&fit=crop',
-      views: 8750,
-      comments: 45,
-    }
-  ];
-
-  const latestNews = [
-    {
-      id: '3',
-      title: 'Gulf Employment Opportunities Rise',
-      malayalamTitle: 'ഗൾഫ് തൊഴിലവസരങ്ങൾ വർധിച്ചു',
-      excerpt: 'New visa policies open doors for skilled workers from Kerala...',
-      malayalamExcerpt: 'പുതിയ വിസ നയങ്ങൾ കേരളത്തിലെ വിദഗ്ധ തൊഴിലാളികൾക്ക് വാതിലുകൾ തുറക്കുന്നു...',
-      category: 'Gulf',
-      author: 'Ahmed Ali',
-      publishedAt: '5 hours ago',
-      imageUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop',
-      views: 12340,
-      comments: 67,
-    },
-    {
-      id: '4',
-      title: 'Local Sports Championship Results',
-      malayalamTitle: 'പ്രാദേശിക കായിക ചാമ്പ്യൻഷിപ്പ് ഫലങ്ങൾ',
-      excerpt: 'Young athletes from Kerala shine in national competitions...',
-      malayalamExcerpt: 'ദേശീയ മത്സരങ്ങളിൽ കേരളത്തിലെ യുവ കായികതാരങ്ങൾ മിഴിവോടെ...',
-      category: 'Sports',
-      author: 'Ravi Menon',
-      publishedAt: '6 hours ago',
-      imageUrl: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=600&h=400&fit=crop',
-      views: 5678,
-      comments: 23,
-    },
-    {
-      id: '5',
-      title: 'Business Growth in IT Sector',
-      malayalamTitle: 'ഐടി മേഖലയിൽ ബിസിനസ് വളർച്ച',
-      excerpt: 'Tech companies report significant expansion in Kerala market...',
-      malayalamExcerpt: 'കേരള വിപണിയിൽ ടെക് കമ്പനികൾ കാര്യമായ വിപുലീകരണം റിപ്പോർട്ട് ചെയ്യുന്നു...',
-      category: 'Business',
-      author: 'Deepak Nair',
-      publishedAt: '8 hours ago',
-      imageUrl: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
-      views: 9876,
-      comments: 34,
-    },
-    {
-      id: '6',
-      title: 'Cultural Festival Celebrations',
-      malayalamTitle: 'സാംസ്കാരിക ഉത്സവ ആഘോഷങ്ങൾ',
-      excerpt: 'Traditional arts and crafts take center stage in statewide celebrations...',
-      malayalamExcerpt: 'സംസ്ഥാനവ്യാപി ആഘോഷങ്ങളിൽ പരമ്പരാഗത കലകളും കരകൗശലങ്ങളും കേന്ദ്രവേദിയിൽ...',
-      category: 'Entertainment',
-      author: 'Lakshmi Devi',
-      publishedAt: '12 hours ago',
-      imageUrl: 'https://images.unsplash.com/photo-1558618666-fcd25c2cd1d6?w=600&h=400&fit=crop',
-      views: 7234,
-      comments: 56,
+      imageUrl: 'https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=600&h=400&fit=crop',
+      views: 14230,
+      comments: 67
     }
   ];
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
-      <NDTVHeroSection />
-      <TopNewsSection />
+      <NDTVHeader />
+      <NDTVHeroMain />
       
-      <main className="container mx-auto px-4 py-12">
-        {/* Breaking News Section */}
-        <section className="mb-16">
+      {/* Breaking News and Trending Section */}
+      <section className="py-12 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Breaking News Stories - Left Side */}
+            <div className="lg:col-span-2 space-y-8">
+              <BreakingNewsStory />
+              <SecondBreakingNewsStory />
+            </div>
+            
+            {/* Trending News Sidebar - Right Side */}
+            <div className="lg:col-span-1">
+              <TrendingNewsSidebar />
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <NDTVNewsSections />
+      
+      {/* Additional Featured Stories Section */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4">
           <div className="flex items-center space-x-3 mb-8">
             <div className="flex items-center space-x-2">
-              <Flame className="h-6 w-6 text-breaking animate-pulse-breaking" />
+              <TrendingUp className="h-6 w-6 text-primary" />
               <h2 className="text-3xl font-bold text-headline-primary font-headline">
-                Breaking News
+                Featured Stories
               </h2>
             </div>
-            <Badge className="bg-breaking text-breaking-foreground animate-pulse-breaking">
-              Live Updates
+            <Badge className="bg-trending text-trending-foreground">
+              Editor's Pick
             </Badge>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {breakingNews.map((news, index) => (
-              <NewsCard
-                key={news.id}
-                {...news}
-                isFeatured={index === 0}
-                isBreaking={true}
-              />
+            {featuredStories.map((story, index) => (
+              <div key={story.id} className="bg-white rounded-xl shadow-news-card hover:shadow-gold transition-all duration-300 overflow-hidden group">
+                <div className="relative">
+                  <img
+                    src={story.imageUrl}
+                    alt={story.title}
+                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  {story.isBreaking && (
+                    <Badge className="absolute top-4 right-4 bg-gradient-breaking text-white animate-pulse-breaking">
+                      <Flame className="w-3 h-3 mr-1" />
+                      BREAKING
+                    </Badge>
+                  )}
+                  <Badge className="absolute top-4 left-4 bg-trending text-trending-foreground">
+                    {story.category}
+                  </Badge>
+                </div>
+                
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors font-headline">
+                    {story.title}
+                  </h3>
+                  
+                  <p className="text-muted-foreground mb-4 font-malayalam">
+                    {story.malayalamTitle}
+                  </p>
+                  
+                  <p className="text-gray-600 mb-4 line-clamp-3">
+                    {story.excerpt}
+                  </p>
+                  
+                  <div className="flex items-center justify-between text-sm text-muted-foreground">
+                    <div className="flex items-center space-x-4">
+                      <span>{story.author}</span>
+                      <span>{story.publishedAt}</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <div className="flex items-center space-x-1">
+                        <Eye className="w-4 h-4" />
+                        <span>{story.views.toLocaleString()}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
-        </section>
-
-        {/* Latest News Section */}
-        <section>
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-3xl font-bold text-headline-primary font-headline">
-              Latest News
-            </h2>
-            <Button variant="outline" className="group">
-              View All News
-              <ChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {latestNews.map((news) => (
-              <NewsCard key={news.id} {...news} />
-            ))}
-          </div>
-        </section>
-
-        {/* Load More Section */}
-        <div className="text-center mt-12">
-          <Button size="lg" variant="outline" className="group">
-            Load More Articles
-            <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-          </Button>
         </div>
-      </main>
+      </section>
 
-      {/* Footer placeholder */}
-      <footer className="bg-muted/50 border-t border-border mt-16">
-        <div className="container mx-auto px-4 py-8">
-          <div className="text-center text-muted-foreground">
-            <p className="font-malayalam">© 2024 സുപ്രഭാതം | Suprabhaatham News Portal</p>
-            <p className="text-sm mt-2">All rights reserved. Built with React + Vite</p>
-          </div>
-        </div>
-      </footer>
+      <NDTVFooter />
     </div>
   );
 };

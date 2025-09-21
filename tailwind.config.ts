@@ -79,6 +79,7 @@ export default {
         'news-card': 'var(--shadow-news-card)',
         'hero': 'var(--shadow-hero)',
         'breaking': 'var(--shadow-breaking)',
+        'gold': 'var(--shadow-gold)',
       },
       fontFamily: {
         'headline': 'var(--font-headline)',
@@ -132,6 +133,10 @@ export default {
           "0%": { boxShadow: "0 0 5px rgba(59, 130, 246, 0.5)" },
           "100%": { boxShadow: "0 0 20px rgba(59, 130, 246, 0.8)" },
         },
+        "marquee": {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -144,6 +149,7 @@ export default {
         "bounce-in": "bounce-in 0.8s ease-out",
         "slide-up": "slide-up 0.5s ease-out",
         "glow": "glow 2s ease-in-out infinite alternate",
+        "marquee": "marquee 30s linear infinite",
       },
     },
   },
