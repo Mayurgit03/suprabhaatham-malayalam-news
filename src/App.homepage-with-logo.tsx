@@ -59,15 +59,15 @@ const HomepageWithLogo = () => {
             <div className="bg-green-50 border border-green-200 rounded-lg p-4 max-w-2xl mx-auto">
               <h3 className="font-semibold text-green-900 mb-2">✅ Production-Ready News Website</h3>
               <div className="text-sm text-green-800 space-y-1">
-                <p>✅ Header: Logo with web-hosted image (Vercel compatible)</p>
+                <p>✅ Header: Logo with exact image from public folder</p>
                 <p>✅ Footer: Logo added with image (Malayalam text removed)</p>
                 <p>✅ Breaking News 1: Malayalam suicide attempt story</p>
                 <p>✅ Breaking News 2: KAPPA act exile story added</p>
                 <p>✅ Trending Sidebar: H-1B visa related stories</p>
                 <p>✅ Responsive Design: Mobile, tablet, and desktop optimized</p>
                 <p>✅ Favicon: Custom logo favicon for browser tab</p>
-                <p>✅ Production Ready: All images use web-hosted URLs</p>
-                <p>🌐 Logo source: <code className="bg-green-100 px-1 rounded">Unsplash CDN (production-ready)</code></p>
+                <p>✅ Production Ready: Uses local logo from public folder</p>
+                <p>📁 Logo source: <code className="bg-green-100 px-1 rounded">/public/logo.png (your exact logo)</code></p>
               </div>
             </div>
           </div>

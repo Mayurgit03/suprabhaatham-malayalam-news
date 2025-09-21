@@ -38,10 +38,11 @@ A modern, responsive Malayalam news website built with React, TypeScript, and Ta
 
 This website is optimized for deployment on Vercel:
 
-1. All images use web-hosted URLs (no local file dependencies)
+1. Logo uses local file from public folder (/logo.png)
 2. Proper meta tags for SEO and social sharing
 3. Custom favicon with brand colors
 4. Responsive design for all devices
+5. Make sure to include logo.png in your public folder before deployment
 
 ## 📝 Content Sections
 
@@ -54,12 +55,13 @@ This website is optimized for deployment on Vercel:
 
 ## 🌐 Production Ready
 
-- ✅ Web-hosted images (Unsplash CDN)
+- ✅ Local logo from public/logo.png (your exact logo)
 - ✅ Custom favicon
 - ✅ SEO meta tags
 - ✅ Responsive design
 - ✅ Malayalam font support
 - ✅ Professional news layout
+- ✅ Error handling for missing images
 
 ## 📄 License
 

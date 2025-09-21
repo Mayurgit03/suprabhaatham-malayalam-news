@@ -26,18 +26,22 @@ const Logo: React.FC<LogoProps> = ({
     lg: 'text-2xl'
   };
 
-  // Using a web-hosted logo that works in production
-  const logoUrl = "https://images.unsplash.com/photo-1705751668509-b3ca0953582c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTAwNDR8MHwxfHNlYXJjaHw1fHxtaWNyb3Bob25lJTIwbmV3cyUyMGJyb2FkY2FzdGluZyUyMGNpcmN1bGFyJTIwbG9nbyUyMHJlZCUyMHllbGxvd3xlbnwwfDJ8fHJlZHwxNzU4NDY1NzEzfDA&ixlib=rb-4.1.0&q=85";
+  // Using the exact logo from public folder
+  const logoUrl = "/logo.png";
 
   return (
     <Link to="/" className={`flex items-center space-x-4 group ${className}`}>
       <div className="relative">
         <img
           src={logoUrl}
-          alt="Time to Time News Logo - Circular red and yellow broadcasting logo by Jon Geng on Unsplash"
+          alt="Time to Time News Logo - Official circular logo with microphone design"
           className={`${sizeClasses[size]} object-cover rounded-full shadow-lg group-hover:shadow-gold transition-all duration-300 group-hover:scale-105 border-2 border-white`}
           width={size === 'sm' ? 40 : size === 'md' ? 56 : 80}
           height={size === 'sm' ? 40 : size === 'md' ? 56 : 80}
+          onError={(e) => {
+            console.error('Logo failed to load:', logoUrl);
+            // Fallback to a default if needed
+          }}
         />
       </div>
       {showText && (
