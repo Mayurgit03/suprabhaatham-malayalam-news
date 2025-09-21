@@ -1,73 +1,66 @@
-# Welcome to your Lovable project
+# Time To Time News - Malayalam News Portal
 
-## Project info
+A modern, responsive Malayalam news website built with React, TypeScript, and Tailwind CSS.
 
-**URL**: https://lovable.dev/projects/4fb6265f-9da8-45a9-9f60-2f61f0e070c1
+## 🚀 Features
 
-## How can I edit this code?
+- **Responsive Design**: Optimized for mobile, tablet, and desktop
+- **Malayalam Content**: Full Malayalam language support with proper typography
+- **Breaking News**: Real-time breaking news sections
+- **Modern UI**: Clean, professional news website design
+- **Custom Branding**: Custom logo and favicon
+- **SEO Optimized**: Meta tags and social sharing support
 
-There are several ways of editing your application.
+## 🛠️ Tech Stack
 
-**Use Lovable**
+- **Frontend**: React 19, TypeScript
+- **Styling**: Tailwind CSS, Custom CSS
+- **Icons**: Lucide React
+- **Routing**: React Router v7
+- **Build Tool**: Vite
+- **Deployment**: Vercel
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/4fb6265f-9da8-45a9-9f60-2f61f0e070c1) and start prompting.
+## 📱 Responsive Breakpoints
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Mobile**: < 640px
+- **Tablet**: 640px - 1279px  
+- **Desktop**: 1280px+
 
-**Use your preferred IDE**
+## 🎨 Design Features
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- Custom red and yellow branding
+- Malayalam and English typography
+- Breaking news animations
+- Hover effects and transitions
+- Professional news layout
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🚀 Deployment
 
-Follow these steps:
+This website is optimized for deployment on Vercel:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+1. All images use web-hosted URLs (no local file dependencies)
+2. Proper meta tags for SEO and social sharing
+3. Custom favicon with brand colors
+4. Responsive design for all devices
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 📝 Content Sections
 
-# Step 3: Install the necessary dependencies.
-npm i
+- **Header**: Navigation with logo and search
+- **Hero Section**: Main breaking news story
+- **Breaking News**: Multiple breaking news stories
+- **Trending Sidebar**: Popular news stories
+- **News Sections**: Categorized news content
+- **Footer**: Links and branding
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+## 🌐 Production Ready
 
-**Edit a file directly in GitHub**
+- ✅ Web-hosted images (Unsplash CDN)
+- ✅ Custom favicon
+- ✅ SEO meta tags
+- ✅ Responsive design
+- ✅ Malayalam font support
+- ✅ Professional news layout
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📄 License
 
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/4fb6265f-9da8-45a9-9f60-2f61f0e070c1) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+This project is built for Time To Time News - Malayalam News Portal.

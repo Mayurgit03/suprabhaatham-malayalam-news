@@ -14,7 +14,7 @@ const NDTVHeroMain = () => {
     category: 'Kerala',
     author: 'സുപ്രഭാതം ന്യൂസ് ടീം',
     publishedAt: '30 minutes ago',
-    imageUrl: '/image/WhatsApp Image 2025-09-20 at 20.11.13_441ae633.jpg',
+    imageUrl: 'https://images.unsplash.com/photo-1627636784403-a9ccdea8174d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTAwNDR8MHwxfHNlYXJjaHwyfHxwb2xpY2UlMjBlbWVyZ2VuY3klMjByZXNjdWUlMjBvZmZpY2Vyc3xlbnwwfDB8fHwxNzU4NDY2NzI5fDA&ixlib=rb-4.1.0&q=85',
     isBreaking: true,
     views: 15420,
     comments: 89,
@@ -28,7 +28,7 @@ const NDTVHeroMain = () => {
       malayalamTitle: 'Palakkad: Child to be brought back immediately',
       category: 'Kerala',
       publishedAt: '45 minutes ago',
-      imageUrl: '/image/WhatsApp Image 2025-09-20 at 20.11.13_441ae633.jpg',
+      imageUrl: 'https://images.unsplash.com/photo-1627636784403-a9ccdea8174d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTAwNDR8MHwxfHNlYXJjaHwyfHxwb2xpY2UlMjBlbWVyZ2VuY3klMjByZXNjdWUlMjBvZmZpY2Vyc3xlbnwwfDB8fHwxNzU4NDY2NzI5fDA&ixlib=rb-4.1.0&q=85',
       views: 8750,
       isBreaking: true
     },
