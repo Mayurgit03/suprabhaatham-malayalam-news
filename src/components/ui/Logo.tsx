@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logoUrl from '@/assets/loggo.jpg'; // Import from src/assets
 
 interface LogoProps {
   className?: string;
@@ -25,9 +26,6 @@ const Logo: React.FC<LogoProps> = ({
     md: 'text-xl',
     lg: 'text-2xl'
   };
-
-  // Using the exact logo from public folder
-  const logoUrl = "/logo.png";
 
   return (
     <Link to="/" className={`flex items-center space-x-4 group ${className}`}>
