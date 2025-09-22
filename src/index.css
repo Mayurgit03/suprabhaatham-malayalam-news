@@ -163,4 +163,99 @@ All colors MUST be HSL.
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
   }
+  
+  .line-clamp-6 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+  }
+  
+  .line-clamp-8 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 8;
+  }
+
+  /* Responsive utilities for better mobile/tablet/desktop support */
+  .aspect-video {
+    aspect-ratio: 16 / 9;
+  }
+  
+  .aspect-square {
+    aspect-ratio: 1 / 1;
+  }
+  
+  /* Ensure images don't break layout on any device */
+  .responsive-img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  /* Stable layout utilities for deployment */
+  .stable-layout {
+    box-sizing: border-box;
+    position: relative;
+  }
+  
+  /* Prevent layout shifts */
+  .prevent-layout-shift {
+    contain: layout style;
+  }
+  
+  /* Mobile-first responsive text */
+  @media (max-width: 640px) {
+    .responsive-text-sm {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+    }
+    
+    .responsive-text-base {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+    
+    .responsive-text-lg {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+  }
+  
+  /* Tablet responsive text */
+  @media (min-width: 641px) and (max-width: 1024px) {
+    .responsive-text-sm {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+    
+    .responsive-text-base {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+    
+    .responsive-text-lg {
+      font-size: 1.25rem;
+      line-height: 1.875rem;
+    }
+  }
+  
+  /* Desktop responsive text */
+  @media (min-width: 1025px) {
+    .responsive-text-sm {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+    
+    .responsive-text-base {
+      font-size: 1.25rem;
+      line-height: 1.875rem;
+    }
+    
+    .responsive-text-lg {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+  }
 }

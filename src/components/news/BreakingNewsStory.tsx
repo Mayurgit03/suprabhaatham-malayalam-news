@@ -1,113 +1,134 @@
 import React from 'react';
 import { Badge } from '@/components/ui/badge';
-import { Clock, Eye, MessageCircle, AlertTriangle } from 'lucide-react';
+import { Clock, Eye, MessageCircle, Users, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import ResponsiveImage from '@/components/ui/ResponsiveImage';
 
 const BreakingNewsStory = () => {
   const breakingStory = {
-    id: 'breaking-mumbai-rescue',
-    title: 'കാമുകന്റെ ആത്മഹത്യ; പിന്നാലെ 19-കാരിയുടെ ജീവനൊടുക്കാനുള്ള ശ്രമം; വാതിൽ തകർത്ത് രക്ഷിച്ച് പൊലിസ്',
-    englishTitle: 'Police Rescue 19-Year-Old Girl After Boyfriend\'s Suicide Attempt',
-    excerpt: 'മുംബൈ: കാമുകന്റെ ആത്മഹത്യയിൽ മനംനൊന്ത് ജീവനൊടുക്കാൻ ശ്രമിച്ച 19-കാരിയെ മുംബൈ പൊലിസ് നടത്തിയ സമയോചിതമായ ഇടപെടലിലൂടെ രക്ഷപ്പെടുത്തി.',
-    fullContent: `മുംബൈ: കാമുകന്റെ ആത്മഹത്യയിൽ മനംനൊന്ത് ജീവനൊടുക്കാൻ ശ്രമിച്ച 19-കാരിയെ മുംബൈ പൊലിസ് നടത്തിയ സമയോചിതമായ ഇടപെടലിലൂടെ രക്ഷപ്പെടുത്തി. മുംബൈയിലെ പവായ് മേഖലയിൽ നടന്ന ഈ സംഭവത്തിൽ, പൊലിസിന്റെ വേഗത്തിലുള്ള നടപടിയാണ് യുവതിയുടെ ജീവൻ രക്ഷിച്ചത്. നിലവിൽ പെൺകുട്ടി ആശുപത്രിയിൽ ചികിത്സയിലാണ്.
+    id: 'student-found-palakkad',
+    title: 'കാണാതായ വിദ്യാർത്ഥിയെ കണ്ടെത്തി',
+    englishTitle: 'Missing 13-Year-Old Student Found Safe in Thrissur',
+    excerpt: 'പാലക്കാട്: ചന്ദ്രനഗറിൽ നിന്നും കാണാതായ 13 കാരനായ വിദ്യാര്‍ത്ഥിയെ കണ്ടെത്തി. ട്രെയിനില്‍ യാത്ര ചെയ്യുകയായിരുന്ന കുട്ടിയെ തൃശൂരിൽ നിന്നാണ് കണ്ടെത്തിയത്.',
+    fullContent: `പാലക്കാട്: ചന്ദ്രനഗറിൽ നിന്നും കാണാതായ 13 കാരനായ വിദ്യാര്‍ത്ഥിയെ കണ്ടെത്തി. ട്രെയിനില്‍ യാത്ര ചെയ്യുകയായിരുന്ന കുട്ടിയെ തൃശൂരിൽ നിന്നാണ് കണ്ടെത്തിയത്. ആര്‍പിഎഫ് ആണ് കണ്ടെത്തിയത്. കുട്ടിയെ ഉടൻ പാലക്കാട് എത്തിക്കും.
 
-ശനിയാഴ്ചയാണ് യുവതിയുടെ 19-വയസ്സുള്ള കാമുകൻ ആത്മഹത്യ ചെയ്തത്. ഇരുവരും തമ്മിലുള്ള പ്രണയബന്ധം അറിയാവുന്ന യുവാവിന്റെ കുടുംബം, ആത്മഹത്യയ്ക്ക് പിന്നിൽ യുവതിയാണെന്ന് ആരോപിച്ചു. കാമുകന്റെ മരണവും കുടുംബത്തിന്റെ കുറ്റപ്പെടുത്തലുകളും യുവതിയെ മാനസികമായി തകർത്തു. തുടർന്ന്, യുവതി സ്വന്തം വീട്ടിൽ കയറി വാതിൽ അടച്ചതായി വിവരം ലഭിച്ചതിനെ തുടർന്ന് പൊലിസ് സംഘം സ്ഥലത്തെത്തി.
+പാലക്കാട്‌ ചന്ദ്രനഗര്‍ സ്വദേശിയായ വിദ്യാർത്ഥിയെ രണ്ട് ദിവസം മുമ്പാണ് കാണാതായത്. രാവിലെ സ്കൂളിലേക്ക് എന്ന് പറഞ്ഞിറങ്ങിയ കുട്ടിയെ പിന്നീട് കാണാതാവുകയായിരുന്നു.
 
-പൊലിസ് എത്തുമ്പോൾ വീടിന്റെ വാതിൽ അകത്തുനിന്ന് പൂട്ടിയ നിലയിലായിരുന്നു. ഉടൻ തന്നെ, പൊലിസ് കോൺസ്റ്റബിൾമാരിലൊരാൾ വാതിൽ ചവിട്ടിത്തുറന്നു. അകത്ത് കയറിയപ്പോൾ, യുവതിയറിൽ തൂങ്ങിയ നിലയിൽ കാണപ്പെട്ടു. പൊലിസ് സംഘം വേഗം യുവതിയെ ആശുപത്രിയിലെത്തിച്ചു`,
+കുട്ടിയെ കണ്ടെത്തുന്നതിന് വേണ്ടി വ്യാപകമായി തിരച്ചിലാണ് പോലീസ് നടത്തിയത്. കുട്ടിയുടെ ഫോട്ടോയും ബന്ധപ്പെടേണ്ട ഫോൺ നമ്പറുകളും പോലീസ് പങ്കുവെച്ചിരുന്നു. ഇതിനെ തുടർന്ന് നിരവധി ഫോൺകോളുകളാണ് പോലീസിന് ലഭിച്ചത്.
+
+കുട്ടിയെ ബാംഗ്ലൂരിൽ കണ്ടതായി വിവരത്തിന്റെ അടിസ്ഥാനത്തിൽ പോലീസ് ബാംഗ്ലൂർ വരെയെത്തി പരിശോധന നടത്തിയിരുന്നു. ഇതിനിടയിലാണ് ഇന്ന് റെയിൽവേ പോലീസ് ഫോഴ്സ് കുട്ടിയെ തൃശ്ശൂരിൽ നിന്ന് കണ്ടെത്തി വിവരം പോലീസിനെ അറിയിക്കുന്നത്.`,
     category: 'Breaking News',
-    location: 'Mumbai',
-    publishedAt: '2 hours ago',
-    views: 25430,
-    comments: 156,
-    imageUrl: 'https://images.unsplash.com/photo-1627636784403-a9ccdea8174d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTAwNDR8MHwxfHNlYXJjaHwyfHxwb2xpY2UlMjBlbWVyZ2VuY3klMjByZXNjdWUlMjBvZmZpY2Vyc3xlbnwwfDB8fHwxNzU4NDY2NzI5fDA&ixlib=rb-4.1.0&q=85',
+    location: 'Palakkad',
+    publishedAt: '30 minutes ago',
+    views: 32150,
+    comments: 248,
+    // Use your exact student photo path - save your image as /public/student-photo.jpg
+    imageUrl: '/student-photo.jpg',
     isBreaking: true,
-    isUrgent: true
+    isUrgent: true,
+    isGoodNews: true
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-news-card overflow-hidden hover:shadow-gold transition-all duration-300">
-      {/* Breaking News Header */}
-      <div className="bg-gradient-breaking text-white p-4">
+    <article className="bg-white rounded-xl shadow-news-card overflow-hidden hover:shadow-gold transition-all duration-300 w-full max-w-4xl mx-auto">
+      {/* Breaking News Header - Responsive */}
+      <header className="bg-gradient-to-r from-green-600 to-green-800 text-white p-3 sm:p-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <AlertTriangle className="w-5 h-5 animate-pulse" />
-            <h2 className="text-lg font-bold font-headline">BREAKING NEWS</h2>
+            <Users className="w-4 h-4 sm:w-5 sm:h-5" />
+            <h2 className="text-sm sm:text-lg font-bold font-headline">BREAKING NEWS</h2>
           </div>
-          <Badge className="bg-white/20 text-white text-xs animate-pulse">
-            LIVE
+          <Badge className="bg-white/20 text-white text-xs animate-pulse px-2 py-1">
+            FOUND SAFE
           </Badge>
         </div>
-      </div>
+      </header>
 
       <Link to={`/article/${breakingStory.id}`} className="block group">
-        {/* Main Image */}
-        <div className="relative">
-          <img
-            src={breakingStory.imageUrl}
-            alt={`${breakingStory.englishTitle} - Police rescue operation by Geoffrey Moffett on Unsplash`}
-            className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-            width={400}
-            height={256}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-          
-          {/* Location Badge */}
-          <Badge className="absolute top-4 left-4 bg-red-600 text-white">
-            {breakingStory.location}
-          </Badge>
-          
-          {/* Urgent Badge */}
-          {breakingStory.isUrgent && (
-            <Badge className="absolute top-4 right-4 bg-yellow-500 text-black animate-pulse">
-              URGENT
+        {/* Main Image - Fully Responsive */}
+        <div className="relative w-full">
+          <div className="aspect-video sm:aspect-[4/3] lg:aspect-video relative overflow-hidden">
+            <ResponsiveImage
+              src={breakingStory.imageUrl}
+              alt="13-year-old student who was found safe - exact photo provided"
+              className="w-full h-full"
+              width={800}
+              height={450}
+              priority={true}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+            
+            {/* Location Badge - Responsive positioning */}
+            <Badge className="absolute top-2 left-2 sm:top-4 sm:left-4 bg-green-600 text-white flex items-center gap-1 text-xs sm:text-sm">
+              <MapPin className="w-3 h-3" />
+              {breakingStory.location}
             </Badge>
-          )}
+            
+            {/* Good News Badge - Responsive positioning */}
+            {breakingStory.isGoodNews && (
+              <Badge className="absolute top-2 right-2 sm:top-4 sm:right-4 bg-blue-500 text-white animate-pulse text-xs sm:text-sm">
+                SAFE & SOUND
+              </Badge>
+            )}
+          </div>
         </div>
 
-        {/* Content */}
-        <div className="p-6">
-          {/* Main Headline in Malayalam */}
-          <h1 className="text-xl font-bold leading-tight mb-3 group-hover:text-primary transition-colors font-malayalam">
+        {/* Content - Responsive padding and typography */}
+        <div className="p-4 sm:p-6">
+          {/* Main Headline in Malayalam - Responsive text sizing */}
+          <h1 className="text-lg sm:text-xl lg:text-2xl font-bold leading-tight mb-3 group-hover:text-primary transition-colors font-malayalam text-green-800 line-clamp-3">
             {breakingStory.title}
           </h1>
 
-          {/* English Translation */}
-          <h2 className="text-lg font-semibold text-gray-700 mb-4 font-headline">
+          {/* English Translation - Responsive text sizing */}
+          <h2 className="text-base sm:text-lg font-semibold text-gray-700 mb-4 font-headline line-clamp-2">
             {breakingStory.englishTitle}
           </h2>
 
-          {/* Excerpt */}
-          <p className="text-gray-600 mb-4 line-clamp-3 font-malayalam leading-relaxed">
+          {/* Excerpt - Responsive text and spacing */}
+          <p className="text-sm sm:text-base text-gray-600 mb-4 line-clamp-3 font-malayalam leading-relaxed">
             {breakingStory.excerpt}
           </p>
 
-          {/* Full Content Preview */}
-          <div className="bg-gray-50 p-4 rounded-lg mb-4">
-            <p className="text-sm text-gray-700 line-clamp-6 font-malayalam leading-relaxed">
+          {/* Full Content Preview - Responsive container */}
+          <div className="bg-green-50 p-3 sm:p-4 rounded-lg mb-4 border-l-4 border-green-600">
+            <p className="text-xs sm:text-sm text-gray-700 line-clamp-6 sm:line-clamp-8 font-malayalam leading-relaxed">
               {breakingStory.fullContent}
             </p>
           </div>
 
-          {/* Meta Information */}
-          <div className="flex items-center justify-between text-sm text-muted-foreground border-t border-gray-200 pt-4">
-            <div className="flex items-center space-x-4">
+          {/* Key Details - Responsive layout */}
+          <div className="bg-blue-50 p-3 sm:p-4 rounded-lg mb-4">
+            <h3 className="font-semibold text-xs sm:text-sm mb-2 text-blue-800">Key Updates:</h3>
+            <ul className="text-xs sm:text-sm text-gray-700 space-y-1 font-malayalam">
+              <li>• 13 വയസ്സുള്ള വിദ്യാർത്ഥി സുരക്ഷിതനായി കണ്ടെത്തി</li>
+              <li>• തൃശൂരിൽ ട്രെയിനിൽ യാത്ര ചെയ്യുന്നതായി കണ്ടെത്തി</li>
+              <li>• റെയിൽവേ പോലീസ് ഫോഴ്സ് (RPF) കണ്ടെത്തി</li>
+              <li>• ഉടൻ പാലക്കാട് എത്തിക്കും</li>
+              <li>• രണ്ട് ദിവസത്തെ തിരച്ചിൽ വിജയകരമായി</li>
+            </ul>
+          </div>
+
+          {/* Meta Information - Responsive layout */}
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between text-xs sm:text-sm text-muted-foreground border-t border-gray-200 pt-3 sm:pt-4 space-y-2 sm:space-y-0">
+            <div className="flex items-center space-x-3 sm:space-x-4">
               <div className="flex items-center space-x-1">
-                <Clock className="w-4 h-4" />
+                <Clock className="w-3 h-3 sm:w-4 sm:h-4" />
                 <span>{breakingStory.publishedAt}</span>
               </div>
               <div className="flex items-center space-x-1">
-                <Eye className="w-4 h-4" />
+                <Eye className="w-3 h-3 sm:w-4 sm:h-4" />
                 <span>{breakingStory.views.toLocaleString()}</span>
               </div>
             </div>
             <div className="flex items-center space-x-1">
-              <MessageCircle className="w-4 h-4" />
+              <MessageCircle className="w-3 h-3 sm:w-4 sm:h-4" />
               <span>{breakingStory.comments}</span>
             </div>
           </div>
         </div>
       </Link>
-    </div>
+    </article>
   );
 };
 

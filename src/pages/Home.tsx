@@ -45,20 +45,24 @@ const Home = () => {
       <NDTVHeader />
       <NDTVHeroMain />
       
-      {/* Breaking News and Trending Section */}
-      <section className="py-12 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Breaking News Stories - Left Side */}
-            <div className="lg:col-span-2 space-y-8">
+      {/* Breaking News and Trending Section - Fully Responsive */}
+      <section className="py-6 sm:py-8 lg:py-12 bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
+            {/* Breaking News Stories - Responsive Layout */}
+            <div className="flex-1 lg:flex-[2] space-y-6 lg:space-y-8">
               <BreakingNewsStory />
-              <SecondBreakingNewsStory />
+              <div className="hidden sm:block">
+                <SecondBreakingNewsStory />
+              </div>
             </div>
             
-            {/* Trending News Sidebar - Right Side */}
-            <div className="lg:col-span-1">
-              <TrendingNewsSidebar />
-            </div>
+            {/* Trending News Sidebar - Responsive */}
+            <aside className="w-full lg:w-80 lg:flex-shrink-0">
+              <div className="sticky top-4">
+                <TrendingNewsSidebar />
+              </div>
+            </aside>
           </div>
         </div>
       </section>

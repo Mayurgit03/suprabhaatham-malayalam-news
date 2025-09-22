@@ -44,7 +44,7 @@ const NDTVHeader = () => {
             </div>
             <div className="flex animate-marquee whitespace-nowrap">
               <span className="text-sm">
-                കാണാതായ 13കാരനായ വിദ്യാർത്ഥിയെ തൃശൂരിൽ കണ്ടെത്തി • Missing 13-year-old student found safe in Thrissur • 
+                പാലക്കാട് ചന്ദ്രനഗറിൽ നിന്ന് കാണാതായ 13കാരനായ വിദ്യാർത്ഥിയെ തൃശൂരിൽ സുരക്ഷിതനായി കണ്ടെത്തി • Missing 13-year-old student from Palakkad found safe in Thrissur by RPF • 
                 Kerala Government announces new IT policy • Heavy rainfall expected in coastal districts • 
                 Gulf employment opportunities rise •
               </span>
